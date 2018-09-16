@@ -3,13 +3,29 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-document.write("<h3>" +"bienvenidos al"+"</h3>");
-document.write("pratica"+"<br>");
-var dia="martes";let mes="enero";
-a=19;
-w=23;
-g=0;
-g=a+w;
-document.write("el dia es igual a "+"<strong>"+dia+"</strong>"+"<br>");
-document.write("<h3>,"+a+" ,"+w+" ,"+g+"</h3>");
-
+var  codigoempleado, nombre, horastrabajados, pagohoras, sueldobruto,ars, afp, ahorras, totaldeducida,sueldoneto , Naominapago;
+// entrada       
+codigoempleado=  prompt("digite codigoempleado ");
+nombre= prompt("Digite nombre");
+horastrabajados  = prompt("Digite horastrabajados");
+pagohoras    = prompt (" digite pagohoras");
+ 
+ //calculo
+ sueldobrutto= parseFloat(horastrabajados) * parseFloat(pagohoras);
+ ars= sueldobruto * 0.7;
+ afp = sueldobruto*0.5 ;
+ ahorras = sueldobruto * 0.4;
+ totaldeducida= ars + afp + ahorras;
+ sueldoneto = sueldobruto - totaldeducida;
+ 
+ // salida 
+ document.write ("codigoempleado: "," " ,codigoempleado,"<br>");
+ document.write ("nombre:"," ", nombre,"<br>");
+ document.write ("horastrabajados:"," ", horastrabajados,"<br>");
+ document.write ("pagohoras :"," ", pagohoras ,  "<br>");
+ document.write ("sueldobrutto: "," ", sueldobrutto, "<br>");
+ document.write ("ars: "," ", ars, "<br>");
+ document.write ("afp: "," ", afp, "<br>");
+ document.write ("ahorras: "," ", ahorras, "<br>");
+ document.write ("totaldeducida: "," " , totaldeducida, "<br>");
+ document.write ("sueldoneto: "," ", sueldoneto, "<br>");
