@@ -3,29 +3,38 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-var  codigoempleado, nombre, horastrabajados, pagohoras, sueldobruto,ars, afp, ahorras, totaldeducida,sueldoneto , Naominapago;
-// entrada       
-codigoempleado=  prompt("digite codigoempleado ");
-nombre= prompt("Digite nombre");
-horastrabajados  = prompt("Digite horastrabajados");
-pagohoras    = prompt (" digite pagohoras");
- 
- //calculo
- sueldobrutto= parseFloat(horastrabajados) * parseFloat(pagohoras);
- ars= sueldobruto * 0.7;
- afp = sueldobruto*0.5 ;
- ahorras = sueldobruto * 0.4;
- totaldeducida= ars + afp + ahorras;
- sueldoneto = sueldobruto - totaldeducida;
- 
- // salida 
- document.write ("codigoempleado: "," " ,codigoempleado,"<br>");
- document.write ("nombre:"," ", nombre,"<br>");
- document.write ("horastrabajados:"," ", horastrabajados,"<br>");
- document.write ("pagohoras :"," ", pagohoras ,  "<br>");
- document.write ("sueldobrutto: "," ", sueldobrutto, "<br>");
- document.write ("ars: "," ", ars, "<br>");
- document.write ("afp: "," ", afp, "<br>");
- document.write ("ahorras: "," ", ahorras, "<br>");
- document.write ("totaldeducida: "," " , totaldeducida, "<br>");
- document.write ("sueldoneto: "," ", sueldoneto, "<br>");
+var  matricula, nombre, parcial1, parcial2 ,final, promedio, notaenletras , calificacion;      
+matricula=  prompt("digite matricula");
+nombre=  prompt("digite nombre");
+parcial1=  prompt("digite parcial1");
+parcial2=  prompt("digite parcial2");
+final = prompt("digite final");
+//calculo 
+
+if (promedio<59) {  
+    notaenletras="F";
+    clasificacion="repite";
+    
+    }else if (promedio > 60 && promedio <=69){
+        nptaenletras="D";
+     calificacion="suficiente"; 
+ }else if (promedio > 70 && promedio <=79){
+     notaenletras="C";
+     calificacion="regular";
+ }else if (promedio > 60 && promedio <=59 ){
+     notaenletras-"B";
+     calificacion="bueno";
+ }else{
+     notaenletras="A";
+     calificacion="escelente";
+    }
+    
+    // salida 
+ document.write ("su matricula es : "," " ,matricula,"<br>");
+ document.write (" su nombre es:"," ", nombre,"<br>");
+ document.write ("su 1er parcial es:"," ", parcial1,"<br>");
+ document.write ("su 2daparcial :"," ", parcial2 ,  "<br>");
+ document.write ("sus notas final es: "," ", final, "<br>");
+ document.write ("su promedio es: "," ", promedio, "<br>");
+ document.write ("notaenletras: "," ", notaenletras, "<br>");
+ document.write ("su calificasion es: "," ", calificacion, "<br>");
